@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('horoscope', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('key');
+            $table->string('key')->unique();
             $table->string('name');
             $table->timestamps();
         });
