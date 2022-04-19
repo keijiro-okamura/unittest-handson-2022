@@ -15,4 +15,20 @@ class ExampleTest extends TestCase
     {
         $this->assertTrue(true);
     }
+
+    public function test_ExampleClassのreturnTrueメソッドがtrueを返却することのテスト()
+    {
+        $instance = new ExampleClass();
+
+        $this->assertTrue($instance->returnTrue());
+    }
+}
+
+class ExampleClass
+{
+    public function returnTrue(): bool
+    {
+        return true;
+    }
+
 }
