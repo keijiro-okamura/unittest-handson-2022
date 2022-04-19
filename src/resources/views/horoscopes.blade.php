@@ -52,7 +52,7 @@
 
             @if(@$horoscope_japanese_name !== null)
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    あなたの星座は、{{ $horoscope_japanese_name }}座です。
+                    あなたの星座は、{{ $horoscope_japanese_name }}です。
                 </div>
             @endif
         </div>
