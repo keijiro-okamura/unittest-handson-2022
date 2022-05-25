@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Modules\HoroscopesApi;
+use App\Modules\HoroscopesBeta;
 use App\Modules\HoroscopesInterface;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
@@ -20,7 +21,6 @@ class HoroscopesController extends BaseController
      */
     public function index(Request $request, HoroscopesInterface $horoscopes)
     {
-
         // 日付を星座キーに変換
         $birthday = $request->get('birthday');
         $birthday_yyyymmdd = (new \DateTimeImmutable($birthday))->format('Ymd');
