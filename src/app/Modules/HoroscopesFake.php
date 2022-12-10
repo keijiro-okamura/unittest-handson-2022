@@ -4,7 +4,7 @@ namespace App\Modules;
 
 use Illuminate\Support\Facades\Http;
 
-class HoroscopesApi implements HoroscopesInterface
+class HoroscopesFake implements HoroscopesInterface
 {
     /**
      * @throws \GuzzleHttp\Exception\GuzzleException
@@ -12,7 +12,7 @@ class HoroscopesApi implements HoroscopesInterface
     public function getJapaneseName(string $yyyymmdd) : string
     {
         $response = Http::timeout(3)
-            ->get('http://hogehoge-api.excite.co.jp/horoscopes?birthday='.$yyyymmdd);
+            ->get('http://fake-fortune-api.excite.jp/horoscopes?birthday='.$yyyymmdd);
         return $response->json()['name'];
     }
 }
